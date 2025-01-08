@@ -16,7 +16,8 @@
 \maketitle
 \section{Radian and Degree Measures}
 % example 1
-\subsection{Convert them into degree measure :}
+\subsection{Convert them into degree measure}
+\paragraph{Example 1:}
 \begin{enumerate}
         \begin{paracol}{3}
           \item[a.] $\frac{\pi}{6}$
@@ -33,7 +34,7 @@
 \end{enumerate}
 {\footnotesize Since $\pi=180^{0}$, $1 radian = \frac{180^{0}}{\pi}$ OR $1^{0} = \frac{\pi}{180^{0}}$}
 
-\paragraph{Solutions :}
+\paragraph{Solutions:}
 \begin{enumerate}
         \begin{paracol}{3}
           \item[a.] $\frac{\pi}{6} \times \frac{180^{0}}{\pi} = 30^{0}$
@@ -50,7 +51,8 @@
 \end{enumerate}
 
 % example 2
-\subsection{Convert them to radian measure :}
+\subsection{Convert them to radian measure}
+\paragraph{Example 2:}
 \begin{enumerate}
         \begin{paracol}{3}
           \item[a.] $\theta=5^{'}$
@@ -87,12 +89,12 @@
 \end{enumerate}
 
 % example 3
-\subsection{Sine, Cosine and Tangents:}
-\paragraph{Without using calculator, solve the following questions:}
+\subsection{Sine, Cosine and Tangents}
+\paragraph{Example 3: Without using calculator, solve the following questions}
 \begin{enumerate}
   \item[a.] If $sin(18^{0})= 0.309$, give another angle whose $sin$ is $0.309$.
         
-        Since
+        Solution: Since
         \[
         \begin{aligned}
           sin(180^0-\theta) = sin(\theta)
@@ -103,7 +105,7 @@
 
   \item[b.] If $cos(70^{0})= 0.342$, give another angle whose $cosine$ is $0.342$.
 
-        Since
+        Solution: Since
         \[
         \begin{aligned}
           cos\theta = cos(2\pi - \theta)
@@ -114,16 +116,17 @@
 
   \item[c.] If $cos(300^{0})= \frac{1}{2}$, give another angle whose $cosine$ is $\frac{1}{2}$.
 
-        Since
+        Solution: Since
         \[
         \begin{aligned}
           cos(300^{0}) &= cos(360-60^{0}) = cos(60^{0}) \\
                        &\therefore \theta = 60^{0}
         \end{aligned}
         \]
+
   \item[d.] If $cos(120^{0})= \frac{-1}{2}$, give another angle whose $cosine$ is $-0.5$.
 
-        Since
+        Solution: Since
         \[
         \begin{aligned}
           cos\theta = cos(360-\theta)
@@ -131,6 +134,7 @@
           &\therefore \theta = 240^{0}
         \end{aligned}
         \]
+
   \item[e.] (Use Calculator) If $sin(x)= 0.848$, find two values for $x$ between $0^{0}$ and $360^{0}$.
 
         \[
@@ -138,79 +142,96 @@
           x = 58^{0}, 122^{0}
         \end{aligned}
         \]
-  \item[f.] If $tan\theta = \frac{1}{\sqrt{3}}$, find the other values of $sin\theta (\&) cos\theta$
-
-        \[
-        \begin{aligned}
-          sec^{2}\theta = tan^{2}\theta + 1 = \frac{1}{3}+1 = \frac{4}{3} \\
-          sec\theta = \pm\frac{2}{\sqrt{3}} \Rightarrow cos\theta = \pm \frac{\sqrt{3}}{2} \\
-          sin\theta^{2}\theta = 1 - cos^{2}\theta = 1 - \frac{3}{4} = \frac{1}{4} \\
-          sin\theta = \pm\frac{1}{2}
-        \end{aligned}
-        \]
-  \item[g.] If $sin\theta = \frac{1}{\sqrt{2}}$, find the values of $cos\theta, (\&) tan\theta$
-
-        \[
-        \begin{aligned}
-          cos^{2}\theta = 1 - sin^{2}\theta = 1 - \frac{1}{2} = \frac{1}{2} \\
-          cos\theta = \pm\frac{1}{\sqrt{2}} \\
-          tan\theta = \frac{sin\theta}{cos\theta} = \frac{1/\sqrt{2}}{\pm\frac{1}{\sqrt{2}}} = \pm 1
-        \end{aligned}
-        \]
-        Alternatively, we can find these values by drawing a right angle triangle.
-
-        \begin{center}
-          \begin{tikzpicture}[thick]
-            % Draw the triangle
-            \coordinate (A) at (3,3);
-            \coordinate (B) at (0,0);
-            \coordinate (C) at (3,0);
-
-            \draw (A) -- (B) -- (C) -- cycle;
-
-            % Add labels
-            \node[above] at (A) {A};
-            \node[below] at (B) {B};
-            \node[below] at (C) {C};
-            \draw (1.5, 1.5) node[above left]{$\sqrt{2}$};
-            \draw (3.0, 1.5) node[above right]{$1$};
-
-            % Draw angles with markers
-            \pic [draw, angle radius=9mm, "$\theta$"] {angle = C--B--A};
-          \end{tikzpicture}
-        \end{center}
-
-        Solution:
-
-        \[ sin\theta = \frac{1}{\sqrt{2}} \]
-        Applying Pythagorus theorem
-        \[
-        \begin{aligned}
-          BC^{2} = AB^{2} - AC^{2} = 2 - 1 = 1 \\
-          BC = 1
-        \end{aligned}
-        \]
-        Now,
-
-        \[
-        \begin{aligned}
-          cos\theta = \frac{BC}{AB} = \frac{1}{\sqrt{2}} \\
-          tan\theta = \frac{AC}{BC} = \frac{1}{1} = 1
-        \end{aligned}
-        \]
-
 \end{enumerate}
 
-\subsection{Verifying Trigonometric Identities :}
-\paragraph{Verify each of the following by putting values :}
+\paragraph{Example 4:}
+If $tan\theta = \frac{1}{\sqrt{3}}$, find the other values of $sin\theta (\&) cos\theta$
+
+Solution:
+\[
+  \begin{aligned}
+    sec^{2}\theta = tan^{2}\theta + 1 = \frac{1}{3}+1 = \frac{4}{3} \\
+    sec\theta = \pm\frac{2}{\sqrt{3}} \Rightarrow cos\theta = \pm \frac{\sqrt{3}}{2} \\
+    sin\theta^{2}\theta = 1 - cos^{2}\theta = 1 - \frac{3}{4} = \frac{1}{4} \\
+    sin\theta = \pm\frac{1}{2}
+  \end{aligned}
+\]
+
+\paragraph{Example 5:}
+If $sin\theta = \frac{1}{\sqrt{2}}$, find the values of $cos\theta, (\&) tan\theta$
+
+Solution:
+\[
+  \begin{aligned}
+    cos^{2}\theta = 1 - sin^{2}\theta = 1 - \frac{1}{2} = \frac{1}{2} \\
+    cos\theta = \pm\frac{1}{\sqrt{2}} \\
+    tan\theta = \frac{sin\theta}{cos\theta} = \frac{1/\sqrt{2}}{\pm\frac{1}{\sqrt{2}}} = \pm 1
+  \end{aligned}
+\]
+Alternatively, we can find these values by drawing a right angle triangle.
+
+\begin{center}
+  \begin{tikzpicture}[thick]
+    % Draw the triangle
+    \coordinate (A) at (3,3);
+    \coordinate (B) at (0,0);
+    \coordinate (C) at (3,0);
+
+    \draw (A) -- (B) -- (C) -- cycle;
+
+    % Add labels
+    \node[above] at (A) {A};
+    \node[below] at (B) {B};
+    \node[below] at (C) {C};
+    \draw (1.5, 1.5) node[above left]{$\sqrt{2}$};
+    \draw (3.0, 1.5) node[above right]{$1$};
+
+    % Draw angles with markers
+    \pic [draw, angle radius=9mm, "$\theta$"] {angle = C--B--A};
+  \end{tikzpicture}
+\end{center}
+
+Solution:
+\[ sin\theta = \frac{1}{\sqrt{2}} \]
+Applying Pythagoras theorem
+\[
+  \begin{aligned}
+    BC^{2} = AB^{2} - AC^{2} = 2 - 1 = 1 \\
+    BC = 1
+  \end{aligned}
+\]
+Now,
+
+\[
+  \begin{aligned}
+    cos\theta = \frac{BC}{AB} = \frac{1}{\sqrt{2}} \\
+    tan\theta = \frac{AC}{BC} = \frac{1}{1} = 1
+  \end{aligned}
+\]
+
+\subsection{Verifying Trigonometric Identities}
+\paragraph{Example 6: Verify each of the following by putting values}
 
 \begin{enumerate}
-        \item[a.] $sin 60^{0} cos 30^{0} - cos 60^{0} sin 30^{0} = sin 30^{0} \Rightarrow \frac{\sqrt{3}}{2} \times \frac{\sqrt{3}}{2} - \frac{1}{2} \times \frac{1}{2} = \frac{3-1}{4}=\frac{1}{2}$
-        \item[b.] $cos 60^{0} cos 30^{0} + sin 60^{0} sin 30^{0} = cos 30^{0} \Rightarrow \frac{1}{2} \times \frac{\sqrt{3}}{2} + \frac{\sqrt{3}}{2} \times \frac{1}{2} = \frac{\sqrt{3}}{2}$
-        \item[c.] $2 sin 30^{0} cos 30^{0} = sin 60^{0} \Rightarrow 2 \times \frac{1}{2} \times \frac{\sqrt{3}}{2} = \frac{\sqrt{3}}{2}$
-        \item[d.] $cos 60^{0} = 2 cos^{2} 30^{0} - 1 \Rightarrow 2 \times \left(\frac{\sqrt{3}}{2}\right)^{2} - 1 = 2 \times \frac{3}{4} - 1 = \frac{1}{2}$
-        \item[e.] $cos 60^{0} = 1 - 2 sin^{2} 30^{0} \Rightarrow 1 - 2 \times \left(\frac{1}{2}\right)^{2} = 1 - \frac{1}{2} = \frac{1}{2}$
+  \item[a.] $sin 60^{0} cos 30^{0} - cos 60^{0} sin 30^{0} = sin 30^{0} \Rightarrow \frac{\sqrt{3}}{2} \times \frac{\sqrt{3}}{2} - \frac{1}{2} \times \frac{1}{2} = \frac{3-1}{4}=\frac{1}{2}$
+  \item[b.] $cos 60^{0} cos 30^{0} + sin 60^{0} sin 30^{0} = cos 30^{0} \Rightarrow \frac{1}{2} \times \frac{\sqrt{3}}{2} + \frac{\sqrt{3}}{2} \times \frac{1}{2} = \frac{\sqrt{3}}{2}$
+  \item[c.] $2 sin 30^{0} cos 30^{0} = sin 60^{0} \Rightarrow 2 \times \frac{1}{2} \times \frac{\sqrt{3}}{2} = \frac{\sqrt{3}}{2}$
+  \item[d.] $cos 60^{0} = 2 cos^{2} 30^{0} - 1 \Rightarrow 2 \times \left(\frac{\sqrt{3}}{2}\right)^{2} - 1 = 2 \times \frac{3}{4} - 1 = \frac{1}{2}$
+  \item[e.] $cos 60^{0} = 1 - 2 sin^{2} 30^{0} \Rightarrow 1 - 2 \times \left(\frac{1}{2}\right)^{2} = 1 - \frac{1}{2} = \frac{1}{2}$
 \end{enumerate}
+
+\paragraph{Example 7:}
+Using the formula $cos A = \sqrt\frac{1+cos2A}{2}$ and $sin A = \sqrt\frac{1-cos2A}{2}$
+find the value of $cos30^{0}$ and $sin30^{0}$.
+
+Solution:
+
+\[
+  \begin{aligned}
+    cos30^{0} = \sqrt\frac{1+cos60^{0}}{2} =  \sqrt\frac{1+\frac{1}{2}}{2} = \sqrt\frac{3}{4} = \frac{\sqrt{3}}{2} \\
+    sin30^{0} = \sqrt\frac{1-cos60^{0}}{2} =  \sqrt\frac{1-\frac{1}{2}}{2} = \sqrt\frac{1}{4} = \frac{1}{2} \\
+  \end{aligned}
+\]
 
 
 \end{document}
