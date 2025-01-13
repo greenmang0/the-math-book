@@ -308,3 +308,6 @@ TSWLatexianTemp*
 
 # ignore pdf files
 *.pdf
+
+# some more files
+triangle.tex
