@@ -7,6 +7,7 @@
 \usepackage{geometry}
 \usepackage{tikz}
 \usetikzlibrary{angles,quotes}
+\usetikzlibrary{datavisualization.formats.functions}
 \geometry{a4paper, left=15mm, top=15mm, right=15mm, bottom=15mm}
 \title{Chapter 18
 
@@ -862,5 +863,71 @@ The population of grasshoppers after $t$ weeks where $0 \leq t \leq 12$ is estim
           \item $2.51 \leq t \leq 5.49$
 \end{enumerate*}
 
+\paragraph{Solve Examples.}
+Sine and cosine graphs
+
+\begin{tikzpicture}
+  \datavisualization [ school book axes,
+  all axes={grid, unit length=1.0cm},
+  y axis={label={$y=\sin\theta$}},
+  x axis={label={$\theta$}},
+  x axis={ticks=stack, ticks and grid={major={at={
+          (pi/2) as $\frac{\pi}{2}$,
+          (pi) as $\pi$,
+          (3*pi/2) as $\frac{3\pi}{2}$,
+          (2*pi) as $2\pi$,
+          (5*pi/2) as $\frac{5\pi}{2}$,
+          (3*pi) as $3\pi$,
+          (7*pi/2) as $\frac{7\pi}{2}$,
+          (4*pi) as $4\pi$
+        }}}},
+  visualize as smooth line/.list={sinx,sin2x},
+  style sheet=strong colors,
+  style sheet=vary dashing,
+  sinx={label in legend={text=$\sin x$}},
+  sin2x={label in legend={text=$\sin 2x$}},
+  new legend entry={text=period is $2\pi$},
+  data/format=function ]
+  data [set=sinx] {
+    var x : interval [0:13] samples 50;
+    func y = 2*sin(\value x r);
+  }
+  data [set=sin2x] {
+    var x : interval [0:13] samples 50;
+    func y = sin(\value x*2 r);
+  };
+\end{tikzpicture}
+
+\begin{tikzpicture}
+  \datavisualization [ school book axes,
+  all axes={grid, unit length=1.0cm},
+  y axis={label={$y=\cos\theta$}},
+  x axis={label={$\theta$}},
+  x axis={ticks=stack, ticks and grid={major={at={
+          (pi/2) as [low=-1em] $\frac{\pi}{2}$,
+          (pi) as $\pi$,
+          (3*pi/2) as [low=-1em] $\frac{3\pi}{2}$,
+          (2*pi) as $2\pi$,
+          (5*pi/2) as [low=-1em] $\frac{5\pi}{2}$,
+          (3*pi) as $3\pi$,
+          (7*pi/2) as [low=-1em] $\frac{7\pi}{2}$,
+          (4*pi) as $4\pi$
+        }}}},
+  visualize as smooth line/.list={cosx,cos2x},
+  style sheet=strong colors,
+  style sheet=vary dashing,
+  cosx={label in legend={text=$\cos x$}},
+  cos2x={label in legend={text=$\cos 2x$}},
+  new legend entry={text=period is $2\pi$},
+  data/format=function ]
+  data [set=cosx] {
+    var x : interval [0:13] samples 50;
+    func y = 2*cos(\value x r);
+  }
+  data [set=cos2x] {
+    var x : interval [0:13] samples 50;
+    func y = cos(\value x*2 r);
+  };
+\end{tikzpicture}
 
 \end{document}
