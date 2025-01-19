@@ -904,13 +904,13 @@ Sine and cosine graphs
   y axis={label={$y=\cos\theta$}},
   x axis={label={$\theta$}},
   x axis={ticks=stack, ticks and grid={major={at={
-          (pi/2) as [low=-1em] $\frac{\pi}{2}$,
+          (pi/2) as $\frac{\pi}{2}$,
           (pi) as $\pi$,
-          (3*pi/2) as [low=-1em] $\frac{3\pi}{2}$,
+          (3*pi/2) as $\frac{3\pi}{2}$,
           (2*pi) as $2\pi$,
-          (5*pi/2) as [low=-1em] $\frac{5\pi}{2}$,
+          (5*pi/2) as $\frac{5\pi}{2}$,
           (3*pi) as $3\pi$,
-          (7*pi/2) as [low=-1em] $\frac{7\pi}{2}$,
+          (7*pi/2) as $\frac{7\pi}{2}$,
           (4*pi) as $4\pi$
         }}}},
   visualize as smooth line/.list={cosx,cos2x},
@@ -929,5 +929,110 @@ Sine and cosine graphs
     func y = cos(\value x*2 r);
   };
 \end{tikzpicture}
+
+\paragraph{Example 1.}
+
+Find the period of
+
+\begin{enumerate*}[label=\roman*)]
+  \item $\cos \frac{x}{2} = 4\pi$
+  \item $\cos 2x = \pi$
+  \item $\cos \frac{x}{3} = 6\pi$
+  \item $\cos 3x = \frac{2\pi}{3}$
+  \item $\cos \frac{1}{2} (x+2) = 4\pi$
+  \item $3\cos4x+1 = \frac{\pi}{2}$
+\end{enumerate*}
+
+\paragraph{Example 2.}
+
+Find the basic sine function whose period is
+
+\begin{enumerate*}[label=\roman*)]
+  \item $\frac{\pi}{5} \Rightarrow \sin 10x$
+  \item $6\pi \Rightarrow \sin \frac{x}{3}$
+  \item $\frac{\pi}{4} \Rightarrow \sin 8x$
+\end{enumerate*}
+
+\paragraph{Example 3.}
+
+Solve
+
+\begin{enumerate}[label=\alph*)]
+  \item What is the maximum and minimum value of function $y = 2\sin x + 3$
+
+        {\scriptsize \textbf{Solution:}}
+        Min = $1$, Max = $5$ as $\sin x$ has max value of $1$ and min value of $-1$.
+
+  \item What is the maximum and minimum value of function $y = 3\cos x - 2$
+
+        {\scriptsize \textbf{Solution:}}
+        Min = $-5$, Max = $1$
+\end{enumerate}
+
+\paragraph{Example 4.}
+
+If $\cos x = \frac{-1}{2}$, find the exact solution where $0 \leq x \leq 4\pi$
+
+{\scriptsize \textbf{Solution:}}
+\[
+  \begin{aligned}
+    x = \frac{2\pi}{3}, \frac{4\pi}{3}, \frac{8\pi}{3}, \frac{10\pi}{3}
+  \end{aligned}
+\]
+
+\paragraph{Example 5.}
+
+If $\sin x = \frac{1}{2}$, find the exact solution where $0 \leq x \leq 540^{0}$
+
+{\scriptsize \textbf{Solution:}}
+\[
+  \begin{aligned}
+    x = 30^{0}, 150^{0}, 390^{0}, 510^{0}
+  \end{aligned}
+\]
+
+\paragraph{Example 6.}
+
+If $\tan x = \sqrt{3}$, find the exact solution where $0 \leq x \leq 540^{0}$
+
+{\scriptsize \textbf{Solution:}}
+\[
+  \begin{aligned}
+    x = 60^{0}, 240^{0}, 420^{0}
+  \end{aligned}
+\]
+
+\paragraph{Example 7.}
+
+Solve for $x$, $\tan(x-\frac{\pi}{3}) = 1$, where $0 \leq x \leq 3\pi$
+
+{\scriptsize \textbf{Solution:}}
+\[
+  \begin{aligned}
+    \tan(x-\frac{\pi}{3}) = 1 \\
+    x - \frac{\pi}{3} = \frac{\pi}{4}, \frac{5\pi}{4}, \frac{9\pi}{4} \\
+    x = \frac{7\pi}{12}, \frac{19\pi}{12}, \frac{31\pi}{12}
+  \end{aligned}
+\]
+
+\paragraph{Example 8.}
+
+Solve for $x$, $\cos(x-\frac{\pi}{3}) = \frac{1}{2}$, where $0 \leq x \leq 4\pi$
+
+{\scriptsize \textbf{Solution:}}
+\[
+  \begin{aligned}
+    \cos(x-\frac{\pi}{3}) = \frac{1}{2} \\
+    x - \frac{\pi}{3} = \frac{\pi}{4}, \frac{5\pi}{4}, \frac{9\pi}{4} \\
+    x - \frac{\pi}{3} = \left. \begin{array}{c} \pi/3 \\ 5\pi/3 \end{array} \right\} + 2K\pi, where K = 0, 1, 2 \\
+    x = \left. \begin{array}{c} 2\pi/3 \\ 2\pi \end{array} \right\} + 2\pi or + 3\pi \\
+    x = \frac{2\pi}{3}, 2\pi, \frac{8\pi}{3}, 4\pi
+  \end{aligned}
+\]
+
+\paragraph{}
+
+Generation equation \[ y = A \sin(B(x + C)) + D \] where $A$ = amplitude, $B$ = effective period, $C$ = transition to left along $x$ axis, $D$ = vertical transition, if $C$ is negative, then transition to right along $x$ axis.
+
 
 \end{document}
