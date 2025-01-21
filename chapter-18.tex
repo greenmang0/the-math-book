@@ -1101,4 +1101,104 @@ Draw graph of $y = - \cos x$.
 \paragraph{Q11.}
 Draw graph of $y = \sin (-x)$.
 
+\subsubsection {Answers to Exercise 18.3}
+
+\paragraph{Q1.}
+Graph
+
+\begin{tikzpicture}
+  \datavisualization [ school book axes,
+                       all axes={grid, unit length=0.9cm},
+                       y axis={label={$y=\cos\theta$}},
+                       x axis={label={$\theta$}},
+                       x axis={ticks=stack, ticks and grid={major={at={
+                               (pi/2) as $90^{0}$,
+                               (pi) as $180^{0}$,
+                               (3*pi/2) as $270^{0}$,
+                               (2*pi) as $360^{0}$,
+                               (5*pi/2) as $450^{0}$,
+                               (3*pi) as $540^{0}$,
+                               (7*pi/2) as $630^{0}$,
+                               (4*pi) as $720^{0}$
+                             }}}},
+                       visualize as smooth line/.list={cosx},
+                       style sheet=strong colors,
+                       data/format=function ]
+  data [set=cosx] {
+    var x : interval [0:13] samples 50;
+    func y = cos(\value x r);
+  };
+\end{tikzpicture}
+
+\begin{enumerate*}[label=\alph*)]
+          \item $120^{0}, 240^{0}, 480^{0}, 600^{0}$
+          \item $60^{0}, 300^{0}, 420^{0}, 660^{0}$
+          \item $180^{0}, 540^{0}$
+          \item $90^{0}, 270^{0}, 450^{0}, 630^{0}$
+\end{enumerate*}
+
+
+\paragraph{Q2.}
+The value of $n$ is $2$, so the period is $\tau = \frac{2\pi}{n} = \frac{2\pi}{2} = \pi$. Note that this means the period is \textbf{half} that of the basic sine function.
+
+\begin{tikzpicture}
+  \datavisualization [ school book axes,
+  all axes={grid, unit length=0.9cm},
+  y axis={label={$y=\sin\theta$}},
+  x axis={label={$x$}},
+  x axis={ticks=stack, ticks and grid={major={at={
+          (pi/2) as $\frac{\pi}{2}$,
+          (pi) as $\pi$,
+          (3*pi/2) as $\frac{3\pi}{2}$,
+          (2*pi) as $2\pi$,
+          (5*pi/2) as $\frac{5\pi}{2}$,
+          (3*pi) as $3\pi$,
+          (7*pi/2) as $\frac{7\pi}{2}$,
+          (4*pi) as $4\pi$
+        }}}},
+  visualize as smooth line/.list={sinx,sin2x},
+  style sheet=strong colors,
+  style sheet=vary dashing,
+  sinx={label in legend={text=$\sin x$}},
+  sin2x={label in legend={text=$\sin 2x$}},
+  data/format=function ]
+  data [set=sinx] {
+    var x : interval [0:13] samples 50;
+    func y = 2*sin(\value x r);
+  }
+  data [set=sin2x] {
+    var x : interval [0:13] samples 50;
+    func y = 2*sin(\value x*2 r);
+  };
+\end{tikzpicture}
+
+\paragraph{Q3.}
+Graph
+
+\begin{tikzpicture}
+  \datavisualization [ school book axes,
+  all axes={grid, unit length=1.0cm},
+  y axis={label={$y=\cos\theta$}},
+  x axis={label={$x$}},
+  x axis={ticks=stack, ticks and grid={major at={
+          (pi/4) as $\frac{\pi}{4}$,
+          (pi/2) as $\frac{\pi}{2}$,
+          (3*pi/4) as $\frac{3\pi}{4}$,
+          (pi) as $\pi$,
+          (5*pi/4) as $\frac{5\pi}{4}$,
+          (3*pi/2) as $\frac{3\pi}{2}$,
+          (7*pi/4) as $\frac{7\pi}{4}$,
+          (2*pi) as $2\pi$
+        }}},
+  visualize as smooth line/.list={cos2x},
+  style sheet=strong colors,
+  style sheet=vary dashing,
+  cos2x={label in legend={text=$\cos 2x$}},
+  data/format=function ]
+  data [set=cos2x] {
+    var x : interval [0:7] samples 50;
+    func y = cos(\value x*2 r);
+  };
+\end{tikzpicture}
+
 \end{document}
