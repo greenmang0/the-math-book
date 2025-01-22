@@ -885,9 +885,9 @@ Sine and cosine graphs
   visualize as smooth line/.list={sinx,sin2x},
   style sheet=strong colors,
   style sheet=vary dashing,
-  sinx={label in legend={text=$\sin x$}},
-  sin2x={label in legend={text=$\sin 2x$}},
-  new legend entry={text=period is $2\pi$},
+  sinx={pin in data={text=$y \text{=} \sin x$, when=x is (3*pi/4)}},
+  sin2x={pin in data={text=$y \text{=} \sin 2x$, when=x is (5*pi/4), pin angle=30}},
+  new legend entry={text=\text{period =} $2\pi$},
   data/format=function ]
   data [set=sinx] {
     var x : interval [0:13] samples 50;
@@ -917,9 +917,9 @@ Sine and cosine graphs
   visualize as smooth line/.list={cosx,cos2x},
   style sheet=strong colors,
   style sheet=vary dashing,
-  cosx={label in legend={text=$\cos x$}},
-  cos2x={label in legend={text=$\cos 2x$}},
-  new legend entry={text=period is $2\pi$},
+  cosx={pin in data={text=$y \text{=} \cos x$, when=x is (2*pi)}},
+  cos2x={pin in data={text=$y \text{=} \cos 2x$}},
+  new legend entry={text=\text{period =} $2\pi$},
   data/format=function ]
   data [set=cosx] {
     var x : interval [0:13] samples 50;
@@ -1108,22 +1108,22 @@ Graph
 
 \begin{tikzpicture}
   \datavisualization [ school book axes,
-                       all axes={grid, unit length=0.9cm},
-                       y axis={label={$y=\cos\theta$}},
-                       x axis={label={$\theta$}},
-                       x axis={ticks=stack, ticks and grid={major={at={
-                               (pi/2) as $90^{0}$,
-                               (pi) as $180^{0}$,
-                               (3*pi/2) as $270^{0}$,
-                               (2*pi) as $360^{0}$,
-                               (5*pi/2) as $450^{0}$,
-                               (3*pi) as $540^{0}$,
-                               (7*pi/2) as $630^{0}$,
-                               (4*pi) as $720^{0}$
-                             }}}},
-                       visualize as smooth line/.list={cosx},
-                       style sheet=strong colors,
-                       data/format=function ]
+  all axes={grid, unit length=0.9cm},
+  y axis={label={$y=\cos\theta$}},
+  x axis={label={$\theta$}},
+  x axis={ticks=stack, ticks and grid={major={at={
+          (pi/2) as $90^{0}$,
+          (pi) as $180^{0}$,
+          (3*pi/2) as $270^{0}$,
+          (2*pi) as $360^{0}$,
+          (5*pi/2) as $450^{0}$,
+          (3*pi) as $540^{0}$,
+          (7*pi/2) as $630^{0}$,
+          (4*pi) as $720^{0}$
+        }}}},
+  visualize as smooth line/.list={cosx},
+  style sheet=strong colors,
+  data/format=function ]
   data [set=cosx] {
     var x : interval [0:13] samples 50;
     func y = cos(\value x r);
@@ -1176,7 +1176,7 @@ Graph
 
 \begin{tikzpicture}
   \datavisualization [ school book axes,
-  all axes={grid, unit length=1.0cm},
+  all axes={grid, unit length=1.5cm},
   y axis={label={$y=\cos\theta$}},
   x axis={label={$x$}},
   x axis={ticks=stack, ticks and grid={major at={
@@ -1192,7 +1192,7 @@ Graph
   visualize as smooth line/.list={cos2x},
   style sheet=strong colors,
   style sheet=vary dashing,
-  cos2x={label in legend={text=$\cos 2x$}},
+  cos2x={pin in data={text=$y \text{=} \cos 2x$}},
   data/format=function ]
   data [set=cos2x] {
     var x : interval [0:7] samples 50;
