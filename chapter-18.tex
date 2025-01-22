@@ -1143,32 +1143,31 @@ The value of $n$ is $2$, so the period is $\tau = \frac{2\pi}{n} = \frac{2\pi}{2
 
 \begin{tikzpicture}
   \datavisualization [ school book axes,
-  all axes={grid, unit length=0.9cm},
-  y axis={label={$y=\sin\theta$}},
+  all axes={grid, unit length=0.7cm},
+  y axis={label={$y$}},
+  x axis={include value=-7},
   x axis={label={$x$}},
   x axis={ticks=stack, ticks and grid={major={at={
-          (pi/2) as $\frac{\pi}{2}$,
+          (-2*pi) as $-2\pi$,
+          (-pi) as $-\pi$,
           (pi) as $\pi$,
-          (3*pi/2) as $\frac{3\pi}{2}$,
           (2*pi) as $2\pi$,
-          (5*pi/2) as $\frac{5\pi}{2}$,
           (3*pi) as $3\pi$,
-          (7*pi/2) as $\frac{7\pi}{2}$,
           (4*pi) as $4\pi$
         }}}},
   visualize as smooth line/.list={sinx,sin2x},
   style sheet=strong colors,
   style sheet=vary dashing,
-  sinx={label in legend={text=$\sin x$}},
-  sin2x={label in legend={text=$\sin 2x$}},
+  sinx={pin in data={text=$\text{y=}\sin (x)$, when=x is (1.3*pi/2)}},
+  sin2x={pin in data={text=$f(x)\text{=}\sin (2x)$, when=x is (13*pi/4)}},
   data/format=function ]
   data [set=sinx] {
-    var x : interval [0:13] samples 50;
-    func y = 2*sin(\value x r);
+    var x : interval [-7:13] samples 50;
+    func y = sin(\value x r);
   }
   data [set=sin2x] {
-    var x : interval [0:13] samples 50;
-    func y = 2*sin(\value x*2 r);
+    var x : interval [-7:13] samples 50;
+    func y = sin(\value x*2 r);
   };
 \end{tikzpicture}
 
