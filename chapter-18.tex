@@ -1201,7 +1201,6 @@ Graph
 \end{tikzpicture}
 
 \paragraph{Q4.}
-
 Basic cosine graph when translated $\frac{\pi}{3}$ units to the left.
 
 \begin{tikzpicture}
@@ -1236,5 +1235,91 @@ Basic cosine graph when translated $\frac{\pi}{3}$ units to the left.
     func y = cos((\value x + \value c) r);
   };
 \end{tikzpicture}
+
+\paragraph{Q5.}
+Graph
+
+\begin{tikzpicture}
+  \datavisualization [ school book axes,
+  all axes={grid, unit length=1.0cm},
+  y axis={label={$y$}},
+  x axis={label={$x$}},
+  x axis={ticks=stack, ticks and grid={major={at={
+          (pi/2) as $90^{0}$,
+          (pi) as $180^{0}$,
+          (3*pi/2) as $270^{0}$,
+          (2*pi) as $360^{0}$,
+          (5*pi/2) as $450^{0}$,
+          (3*pi) as $540^{0}$,
+          (7*pi/2) as $630^{0}$,
+          (4*pi) as $720^{0}$
+        }}}},
+  visualize as smooth line/.list={sinx},
+  style sheet=strong colors,
+  sinx={pin in data={text=$y \text{=} \sin x$, when=x is (3*pi/4)}},
+  data/format=function ]
+  data [set=sinx] {
+    var x : interval [0:13] samples 50;
+    func y = sin(\value x r);
+  };
+\end{tikzpicture}
+
+\begin{enumerate*}[label=\alph*)]
+          \item $90^{0}, 450^{0}$
+          \item $30^{0}, 150^{0}, 390^{0}, 510^{0}$
+          \item $60^{0}, 120^{0}, 420^{0}, 480^{0}$
+          \item $180^{0}, 360^{0}, 540^{0}, 720^{0}$
+          \item $270^{0}, 630^{0}$
+          \item $210^{0}, 330^{0}, 570^{0}, 690^{0}$
+\end{enumerate*}
+
+\paragraph{Q6.}
+Complete the table
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+$\theta$ & $0$ & $\frac{\pi}{6}$ & $\frac{2\pi}{6}$ & $\frac{3\pi}{6}$ & $\frac{4\pi}{6}$ & $\frac{5\pi}{6}$ & $\pi$ & $\frac{7\pi}{6}$ & $\frac{8\pi}{6}$ & $\frac{9\pi}{6}$ & $\frac{10\pi}{6}$ & $\frac{11\pi}{6}$ & $2\pi$ \\[3pt]
+  \hline
+$\sin\theta$ & $0$ & $\frac{1}{2}$ & $\frac{\sqrt{3}}{2}$ & $1$ & $\frac{\sqrt{3}}{2}$ & $\frac{1}{2}$ & $0$ & $\frac{-1}{2}$ & $\frac{-\sqrt{3}}{2}$ & $-1$ & $\frac{-\sqrt{3}}{2}$ & $\frac{-1}{2}$ & $0$ \\
+  \hline
+\end{tabular}
+
+\paragraph{Q7.}
+$f(x) = \cos(\frac{x}{2})$, in this case the value of $n = \frac{1}{2}$ and the period $\tau = \frac{2\pi}{n} = \frac{2\pi}{1/2} = 4\pi$
+
+\begin{tikzpicture}
+  \datavisualization [ school book axes,
+  all axes={grid, unit length=0.7cm},
+  y axis={label={$y$}},
+  x axis={label={$x$}},
+  x axis={ticks=stack, ticks and grid={major at={
+          (-2*pi) as $-2\pi$,
+          (-pi) as $-\pi$,
+          (pi) as $\pi$,
+          (2*pi) as $2\pi$,
+          (3*pi) as $3\pi$,
+          (4*pi) as $4\pi$
+        }}},
+  visualize as smooth line/.list={cosx, cosc},
+  style sheet=strong colors,
+  style sheet=vary dashing,
+  cosx={pin in data={text=$y \text{=} \cos x$, when=x is (pi/4)}},
+  cosc={pin in data={text=$y \text{=} \cos (\frac{x}{2})$, when=x is (7*pi/2)}},
+  data/format=function ]
+  data [set=cosx] {
+    var x : interval [-7:13] samples 50;
+    func y = cos(\value x r);
+  }
+  data [set=cosc] {
+    var x : interval [-7:13] samples 50;
+    func y = cos((\value x / 2) r);
+  };
+\end{tikzpicture}
+
+\begin{enumerate}[label=\alph*)]
+  \item Zeros of $y=\cos(x/2)$, $x = -3\pi, -\pi, \pi, 3\pi, \5pi$
+  \item $\cos \frac{x}{2} = \frac{1}{2}$ $\therefore x = 0, 4\pi$
+  \item $\cos \frac{x}{2} = \frac{-1}{2}$ $\therefore x = 2\pi$
+\end{enumerate}
 
 \end{document}
