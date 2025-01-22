@@ -1200,4 +1200,41 @@ Graph
   };
 \end{tikzpicture}
 
+\paragraph{Q4.}
+
+Basic cosine graph when translated $\frac{\pi}{3}$ units to the left.
+
+\begin{tikzpicture}
+  \datavisualization [ school book axes,
+  all axes={grid, unit length=0.7cm},
+  y axis={label={$y$}},
+  x axis={label={$x$}},
+  x axis={ticks=stack, ticks and grid={major at={
+          (-2*pi) as $-2\pi$,
+          (-pi) as $-\pi$,
+          (pi) as $\pi$,
+          (2*pi) as $2\pi$,
+          (3*pi) as $3\pi$,
+          (4*pi) as $4\pi$
+        }}},
+  x axis={ticks and grid={major also at={
+          (-pi/3) as $\frac{-\pi}{3}$
+        }}},
+  visualize as smooth line/.list={cosx, cosc},
+  style sheet=strong colors,
+  style sheet=vary dashing,
+  cosx={pin in data={text=$y \text{=} \cos x$, when=x is (pi/4)}},
+  cosc={pin in data={text=$y \text{=} \cos (x + \frac{\pi}{3})$, when=x is (3*pi/2)}},
+  data/format=function ]
+  data [set=cosx] {
+    var x : interval [-7:13] samples 50;
+    func y = cos(\value x r);
+  }
+  data [set=cosc] {
+    var c : {1.0471975512};
+    var x : interval [-7:13] samples 50;
+    func y = cos((\value x + \value c) r);
+  };
+\end{tikzpicture}
+
 \end{document}
