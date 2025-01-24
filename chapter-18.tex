@@ -200,17 +200,18 @@ Alternatively, we can find these values by drawing a right angle triangle.
     \coordinate (B) at (0,0);
     \coordinate (C) at (3,0);
 
-    \draw (A) -- (B) -- (C) -- cycle;
+    \draw (A) -- node[midway, left]{$\sqrt{2}$}
+    (B) --
+    (C) -- node[midway, right]{$1$} cycle;
 
-    % Add labels
+    % more labels
     \node[above] at (A) {A};
     \node[below] at (B) {B};
     \node[below] at (C) {C};
-    \draw (1.5, 1.5) node[above left]{$\sqrt{2}$};
-    \draw (3.0, 1.5) node[above right]{$1$};
 
-    % Draw angles with markers
+    % draw angles
     \pic [draw, angle radius=9mm, "$\theta$"] {angle = C--B--A};
+    \pic [draw] {right angle = A--C--B};
   \end{tikzpicture}
 \end{center}
 
@@ -1639,5 +1640,6 @@ Basic sine graph when $f(x) = \sin(-x)$.
   \item $0, 2\pi$
   \item $0, 1.911, 4.373 \text{ or } 6.283$
 \end{enumerate*}
+
 
 \end{document}
