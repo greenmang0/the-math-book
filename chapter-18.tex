@@ -1641,5 +1641,70 @@ Basic sine graph when $f(x) = \sin(-x)$.
   \item $0, 1.911, 4.373 \text{ or } 6.283$
 \end{enumerate*}
 
+\subsection{Opposite real number identities}
+
+\begin{enumerate}
+        \begin{paracol}{2}
+          \item $\sin(-\theta) = -\sin\theta$
+          \item $\cos(-\theta) = \cos\theta$
+          \item $\tan(-\theta) = -\tan\theta$
+          \switchcolumn
+          \item[4.] $\cos(90-\theta) = \sin\theta$
+          \item[5.] $\sin(90-\theta) = \cos\theta$
+          \item[6.] $\tan(90-\theta) = \cot\theta$
+        \end{paracol}
+\end{enumerate}
+
+\paragraph{Example 1.}
+Simplify
+
+\begin{enumerate*}[label=\alph*)]
+  \item $5\sin\theta - 2\cos(90-\theta)$
+  \item $3\sin(90-\theta) + 2\cos\theta$
+  \item $3\sin\theta - 2\sin(-\theta)$
+  \item $2\cos\theta + 4\cos(-\theta) + 3\sin(90-\theta)$
+\end{enumerate*}
+
+{\scriptsize \textbf{Solutions:}}
+
+\begin{enumerate*}[label=\alph*)]
+  \item $5\sin\theta - 2\sin\theta=3\sin\theta$
+  \item $3\cos\theta + 2\cos\theta=5\cos\theta$
+  \item $3\sin\theta + 2\sin\theta=5\sin\theta$
+  \item $2\cos\theta + 4\cos\theta + 3\cos\theta=9\cos\theta$
+\end{enumerate*}
+
+\paragraph{Example 2.}
+Using the diagram, prove that
+
+\begin{enumerate*}[label=\alph*)]
+  \item $\sin(90-\theta) = \cos\theta$
+  \item $\cos(90-\theta) = \sin\theta$
+  \item $\tan(90-\theta) = \cot\theta$
+\end{enumerate*}
+
+\begin{tikzpicture}[thick]
+  % Draw the triangle
+  \coordinate (A) at (3,3);
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (3,0);
+
+  \draw (A) -- node[midway, above]{h}
+  (B) -- node[midway, below]{b}
+  (C) -- node[midway, right]{$90-\theta$} cycle;
+
+  % additional labels
+  \node[above] at (A) {A};
+  \node[below] at (B) {B};
+  \node[below] at (C) {C};
+  \draw (3.0, 0.8) node[above right]{$\rho$};
+
+  % Draw angles
+  \pic [draw, angle radius=9mm, "$\theta$"] {angle = C--B--A};
+  \pic [draw, angle radius=9mm] {angle = B--A--C};
+  \pic [draw, thick] {right angle = A--C--B};
+\end{tikzpicture}
+
+
 
 \end{document}
