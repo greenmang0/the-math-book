@@ -2167,5 +2167,63 @@ Refer Figure 2 and Prove
 \paragraph{Q24.}
 Refer Figure 2 and Prove Area $\Delta ABC = \frac{1}{2}ab\sin C$
 
+\begin{figure}
+  \centering
+  \begin{tikzpicture}[thick]
+    % Draw the triangle
+    \coordinate (A) at (3,3);
+    \coordinate (B) at (0,0);
+    \coordinate (D) at (3,0);
+    \coordinate (C) at (6,0);
+
+    \draw (A) -- node[midway, above]{c}
+    (B) -- node[midway, below]{x}
+    (D) -- node[midway, below]{a-x}
+    (C) -- node[midway, right]{b} cycle;
+
+    \draw (A) -- (D);
+
+    \draw[<->, help lines, thick] (0, -0.7) -- (6, -0.7);
+    \node[below] at (3, -0.7) {a};
+
+    % additional labels
+    \node[above] at (A) {A};
+    \node[below] at (B) {B};
+    \node[below] at (C) {C};
+    \node[below] at (D) {D};
+    % \draw (3.0, 0.8) node[above right]{$\rho$};
+
+    % Draw angles
+    \pic [draw, angle radius=9mm] {angle = A--C--D};
+  \end{tikzpicture}
+  \caption{}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}[thick]
+    % Draw the triangle
+    \coordinate (A) at (3,3);
+    \coordinate (B) at (0,0);
+    \coordinate (D) at (3,0);
+    \coordinate (C) at (6,0);
+
+    \draw (A) -- node[midway, above]{c} (B) -- (D) -- (C) -- node[midway, right]{b} cycle;
+    \draw (A) -- (D);
+
+    % additional labels
+    \node[above] at (A) {A};
+    \node[below] at (B) {B};
+    \node[below] at (C) {C};
+    \node[below] at (D) {D};
+
+    \draw[<->, help lines, thick] (0, -0.7) -- (6, -0.7);
+    \node[below] at (3, -0.7) {a};
+
+    % Draw angles
+    \pic [draw] {right angle = A--D--B};
+  \end{tikzpicture}
+  \caption{}
+\end{figure}
 
 \end{document}
