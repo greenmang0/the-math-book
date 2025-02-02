@@ -2245,4 +2245,42 @@ Refer Figure 2 and Prove Area $\Delta ABC = \frac{1}{2}ab\sin C$
   \item[Q20)] $x = \frac{\pi}{6}, \frac{5\pi}{6}$
 \end{enumerate}
 
+\subsection {Review Exercise 18B}
+
+\paragraph{Q1}
+Which statements are true
+
+\begin{enumerate}[label=\alph*)]
+  \item 
+        \begin{enumerate*}[label=\roman*)]
+          \item $\tan 60^{\circ} = 2$
+          \item $\sin 60^{\circ} = \cos 30^{\circ}$
+          \item $\sin 30^{\circ} > \cos 30^{\circ}$
+          \item $\sin 90^{\circ} = \tan 45^{\circ}$
+          \item $\sin \left( \frac{x}{3} \right) = \frac{1}{2} \Rightarrow x = \frac{\pi}{2}, \frac{5\pi}{2}$
+        \end{enumerate*}
+  \item Solve,
+        \begin{tikzpicture}[thick]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (0,3.2);
+          \coordinate (C) at (10,3.2);
+
+          \draw (A) -- node[midway, left]{80}
+          (B) -- node[midway, above]{250}
+          (C) -- node[midway, below]{y} cycle;
+
+          \pic [draw, angle radius=2.3cm, "$\alpha$"] {angle = B--C--A};
+          \pic [draw, angle radius=1cm, "$60^{\circ}$"] {angle = C--A--B};
+        \end{tikzpicture}
+\end{enumerate}
+
+\paragraph{Q2}
+
+\begin{enumerate*}[label=\alph*)]
+  \item $\tan 2y = \frac{5}{4}$
+  \item $\cos \left( 2 + \frac{\pi}{6} \right) = \frac{-1}{2}$
+  \item $6\sin^{2}y + \cos y - 4 = 0$
+\end{enumerate*}
+
+
 \end{document}
