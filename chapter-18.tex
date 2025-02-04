@@ -2366,4 +2366,23 @@ $5\sin^{2}y + 9\cos y - 3=0$
 \paragraph{Q17.}
 $3\cos 2 \theta^{\circ} = \frac{1}{4}$
 
+\begin{figure}
+  \centering
+
+  \begin{tikzpicture}[thick]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (8,0);
+    \coordinate (C) at (4.59, 1.96);
+
+    \draw (A) -- node[midway, below]{$8$}
+    (B) -- node[midway, above]{$x$}
+    (C) -- node[midway, above]{$5$} cycle;
+
+    \pic [draw, angle eccentricity=1.5, angle radius=1cm, "$23.1^{\circ}$"] {angle = B--A--C};
+  \end{tikzpicture}
+  \caption{}
+
+\end{figure}
+
+
 \end{document}
