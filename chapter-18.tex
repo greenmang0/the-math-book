@@ -5,7 +5,7 @@
 \usepackage{paracol}
 \usepackage[inline]{enumitem}
 \usepackage{geometry}
-\usepackage{tikz}
+\usepackage{tkz-euclide}
 \usetikzlibrary{angles,quotes}
 \usetikzlibrary{datavisualization.formats.functions}
 \renewcommand{\arraystretch}{1.2}
@@ -2585,7 +2585,26 @@ $\angle N^{'}OA = 60^{\circ} \therefore \angle OAB = 60^{\circ}$ (alternate $\an
 \subsection {Exam style questions}
 
 \paragraph{Q1.}
-In the figure, it is given that $AB=8, BC=5=BD$ and $\angle C=53.1^{\circ}$. Find $\angle ADB, AD$
+
+\begin{tikzpicture}[scale=0.75, thick]
+  \tkzDefPoints{0/0/C,5/0/X,16.505048943922077/0/A,6/0/D}
+  \tkzDrawSegment(C,D)
+  \tkzDrawSegment(D,A)
+  \tkzLabelPoints(C,D,A)
+  \tkzDefPointBy[rotation=center C angle 53.1](X)
+  \tkzGetPoint{B}
+  \tkzDrawSegment(C,B)
+  \tkzLabelSegment[left](C,B){$5cm$}
+  \tkzDrawSegment(A,B)
+  \tkzLabelSegment[above](A,B){$8cm$}
+  \tkzDrawSegment(D,B)
+  \tkzLabelSegment[right](D,B){$5cm$}
+  \tkzLabelPoints[above](B)
+  \tkzMarkAngle (D,C,B)
+  \tkzLabelAngle[pos=1.8](D,C,B){$53.1^{\circ}$}
+\end{tikzpicture}
+
+In the figure above, it is given that $AB=8, BC=5=BD$ and $\angle C=53.1^{\circ}$. Find $\angle ADB, AD$
 
 {\scriptsize \textbf{Solution:}}
 
