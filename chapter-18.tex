@@ -2586,6 +2586,8 @@ $\angle N^{'}OA = 60^{\circ} \therefore \angle OAB = 60^{\circ}$ (alternate $\an
 
 \paragraph{Q1.}
 
+In the figure, it is given that $AB=8, BC=5=BD$ and $\angle C=53.1^{\circ}$. Find $\angle ADB, AD$
+
 \begin{tikzpicture}[scale=0.75, thick]
   \tkzDefPoints{0/0/C,5/0/X,16.505048943922077/0/A,6/0/D}
   \tkzDrawSegment(C,D)
@@ -2603,8 +2605,6 @@ $\angle N^{'}OA = 60^{\circ} \therefore \angle OAB = 60^{\circ}$ (alternate $\an
   \tkzMarkAngle (D,C,B)
   \tkzLabelAngle[pos=1.8](D,C,B){$53.1^{\circ}$}
 \end{tikzpicture}
-
-In the figure above, it is given that $AB=8, BC=5=BD$ and $\angle C=53.1^{\circ}$. Find $\angle ADB, AD$
 
 {\scriptsize \textbf{Solution:}}
 
@@ -2626,7 +2626,23 @@ Using sine rule
 \]
 
 \paragraph{Q2.}
+
 In $\triangle ABC$ sides are given as $10cm$ and $12cm$ and included $\angle ACB=48^{\circ}$. Find a) $AB$ b) $\angle BAC$
+
+\begin{tikzpicture}[scale=0.50]
+  \tkzDefPoints{0/0/C,12/0/B,10/0/X}
+  \tkzDrawSegment(C,B)
+  \tkzLabelSegment[below](C,B){$12cm$}
+  \tkzLabelPoints(C,B)
+  \tkzDefPointBy[rotation=center C angle 48](X)
+  \tkzGetPoint{A}
+  \tkzLabelPoints[above](A)
+  \tkzDrawSegment(C,A)
+  \tkzLabelSegment[left](C,A){$10cm$}
+  \tkzDrawSegment(B,A)
+  \tkzMarkAngle (B,C,A)
+  \tkzLabelAngle[pos=1.8](B,C,A){$48^{\circ}$}
+\end{tikzpicture}
 
 {\scriptsize \textbf{Solution:}}
 
