@@ -2666,4 +2666,42 @@ Using sine rule
   \end{aligned}
 \]
 
+\begin{tikzpicture}[scale=0.30]
+  \tkzDefPoint(0,0){B}
+  \tkzDefPoint(23.8,0){C}
+  \tkzDefTriangle[two angles = 50 and 47](B,C)
+  \tkzGetPoint{A}
+  \tkzDrawPolygon(A,B,C)
+  \tkzLabelPoints[above](A)
+  \tkzLabelPoints(B,C)
+  \tkzMarkAngle(C,B,A)
+  \tkzLabelAngle[pos=2](C,B,A){$50^\circ$}
+  \tkzMarkAngle(B,A,C)
+  \tkzLabelAngle[pos=2](B,A,C){$83^\circ$}
+  \tkzLabelSegment[right,above](C,A){$b$}
+  \tkzLabelSegment[left,above](A,B){$c$}
+  \tkzLabelSegment[below](B,C){$a=23.8$}
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=0.35]
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(10,0){C}
+  \tkzDefPoint(21.09,0){D}
+  \tkzDefTriangle[two angles = 15 and 153](A,C)
+  \tkzGetPoint{B}
+  \tkzDrawPolygon(A,B,C)
+  \tkzDrawSegment(C,D)
+  \tkzDrawSegment(B,D)
+  \tkzLabelSegment(B,C){a}
+  \tkzLabelSegment(A,C){$10$}
+  \tkzLabelPoints(A,C,D)
+  \tkzLabelPoints[above](B)
+  \tkzMarkAngle[size=5](A,B,C)
+  \tkzLabelAngle[pos=4](A,B,C){$12^\circ$}
+  \tkzMarkAngle[size=5](C,A,B)
+  \tkzLabelAngle[pos=4](C,A,B){$15^\circ$}
+  \tkzMarkRightAngle[size=1](B,D,C)
+\end{tikzpicture}
+
+
 \end{document}
