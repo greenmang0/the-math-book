@@ -2477,6 +2477,25 @@ In Fig(3), find $x$ and $y$ sides
 \end{enumerate*}
 
 \begin{center}
+  \begin{tikzpicture}[scale=0.25]
+    \tkzDefPoint(0,0){A}
+    \tkzDefPoint(17.54,0){B}
+    \tkzDefTriangle[two angles = 84 and 49](A,B)
+    \tkzGetPoint{C}
+    \tkzDrawPolygon(A,B,C)
+    \tkzLabelPoints[above](C)
+    \tkzLabelPoints[below](A,B)
+    \tkzMarkAngle[size=3](B,A,C)
+    \tkzLabelAngle[pos=5](B,A,C){$84^{\circ}$}
+    \tkzMarkAngle[size=3](A,C,B)
+    \tkzLabelAngle[pos=5](A,C,B){$x^{\circ}$}
+    \tkzLabelSegment[below](A,B){$17.54$}
+    \tkzLabelSegment[right](B,C){$23.8$}
+  \end{tikzpicture}
+  \begin{center}
+    \text{Fig(4)}
+  \end{center}
+
   \begin{tikzpicture}[scale=0.30]
     \tkzDefPoint(0,0){A}
     \tkzDefPoint(9,0){C}
