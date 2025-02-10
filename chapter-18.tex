@@ -2411,8 +2411,63 @@ $3\cos 2 \theta^{\circ} = \frac{1}{4}$
 \paragraph{Q19.}
 In Fig(2), find $x^{\circ},y^{\circ}$ and $DB$
 
+\begin{center}
+  \begin{tikzpicture}[scale=0.07]
+    \tkzDefPoint(0,0){C}
+    \tkzDefPoint(113.45906750894791,0){A}
+    \tkzDefPoint(0,53.6){D}
+    \tkzDrawPolygon(A,C,D)
+    \tkzLabelPoints(C)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[above](D)
+    \tkzDefTriangle[two angles = 90 and 3.993](A,D)
+    \tkzGetPoint{B}
+    \tkzLabelPoints[below](B)
+    \tkzDrawPolygon(A,D,B)
+    \tkzMarkRightAngle[size=7](D,C,A)
+    \tkzMarkRightAngle[size=3](D,A,B)
+    \tkzMarkAngle[size=13](D,A,C)
+    \tkzLabelAngle[pos=17](D,A,C){$x^{\circ}$}
+    \tkzLabelSegment[right](A,B){$6.98$}
+    \tkzLabelSegment[above](D,A){$100$}
+    \tkzLabelSegment[left](D,C){$53.6$}
+  \end{tikzpicture}
+  \begin{center}
+    \text{Fig(2)}
+  \end{center}
+\end{center}
+
 \paragraph{Q20.}
 In Fig(3), find $x$ and $y$ sides
+
+\begin{center}
+  \begin{tikzpicture}[scale=0.75]
+    \tkzDefPoint(0,0){A}
+    \tkzDefPoint(8,0){B}
+    \tkzDefTriangle[two angles = 90 and 32](A,B)
+    \tkzGetPoint{C}
+    \tkzDrawPolygon(A,B,C)
+    \tkzDefTriangle[two angles = 71 and 18](A,B)
+    \tkzGetPoint{M}
+    \tkzGetPointCoord(M){m}
+    \tkzDefPoint(\mx,-\my){D}
+    \tkzDrawPolygon(A,D,B)
+    \tkzLabelPoints[above](C)
+    \tkzLabelPoints[below](B,D)
+    \tkzLabelPoints[left](A)
+    \tkzMarkAngle[size=1](A,C,B)
+    \tkzLabelAngle[pos=1.5](A,C,B){$58^{\circ}$}
+    \tkzMarkAngle[size=0.7](D,A,B)
+    \tkzLabelAngle[pos=1.2](D,A,B){$71^{\circ}$}
+    \tkzMarkRightAngle[size=1](C,A,B)
+    \tkzMarkRightAngle[size=0.7](B,D,A)
+    \tkzLabelSegment[above](A,B){$8$}
+    \tkzLabelSegment[below](D,B){$x$}
+  \end{tikzpicture}
+  \begin{center}
+    \text{Fig(3)}
+  \end{center}
+\end{center}
 
 \paragraph{Q21.}
 
