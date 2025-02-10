@@ -2472,9 +2472,30 @@ In Fig(3), find $x$ and $y$ sides
 \paragraph{Q21.}
 
 \begin{enumerate*}[label=\roman*)]
-  \item In Figure 5, find $x^{\circ}$
+  \item In Fig(4), find $x^{\circ}$
   \item In Fig(5), find $x$
 \end{enumerate*}
+
+\begin{center}
+  \begin{tikzpicture}[scale=0.30]
+    \tkzDefPoint(0,0){A}
+    \tkzDefPoint(9,0){C}
+    \tkzDefTriangle[two angles = 66 and 85](A,C)
+    \tkzGetPoint{B}
+    \tkzDrawPolygon(A,B,C)
+    \tkzLabelPoints[above](B)
+    \tkzLabelPoints[below](A,C)
+    \tkzMarkAngle[size=3](C,A,B)
+    \tkzLabelAngle[pos=5](C,A,B){$66^{\circ}$}
+    \tkzMarkAngle[size=3](A,B,C)
+    \tkzLabelAngle[pos=5](A,B,C){$29^{\circ}$}
+    \tkzLabelSegment[right](B,C){$x$}
+    \tkzLabelSegment[below](A,C){$9$}
+  \end{tikzpicture}
+  \begin{center}
+    \text{Fig(5)}
+  \end{center}
+\end{center}
 
 \paragraph{Q22.}
 Solve $4\sin x\cos x - 2\sin x - 2\cos x + 1$
