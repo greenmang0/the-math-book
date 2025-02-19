@@ -2567,6 +2567,21 @@ $\sin 4x$ & $0$ & & & & & & & & & & &\\
 \paragraph{Q27.}
 Find the value of a)$\tan x^{\circ}$, b) $HB$
 
+\begin{tikzpicture}
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/A,4/0/B,0/4/E,4/4/F}
+  \tkzDrawPolygon(A,B,F,E)
+  \tkzInterLC(A,F)(A,B) \tkzGetPoints{}{D}
+  \tkzDefPointsBy[translation=from A to D](E,F,B){H,G,C}
+  \tkzLabelPoints(A,B,C)
+  \tkzLabelPoints[left](D)
+  \tkzLabelPoints[above](H,G,E,F)
+  \tkzDrawSegments(E,H F,G B,C H,G C,G)
+  \tkzDrawSegments[color=gray, style=dashed](D,A D,C D,H B,H D,B)
+  \tkzMarkAngle[size=1](H,B,D)
+  \tkzLabelAngle[pos=1, left](H,B,D){$x^{\circ}$}
+\end{tikzpicture}
+
 \paragraph{Q28.}
 A ship sails $2.8$km on a bearing of $120^{\circ}$ and then heads $4.0$km in the northerly direction. Find total distance from starting point and earing of $B$ from $O$.
 
@@ -2761,6 +2776,9 @@ Using sine rule
   \end{aligned}
 \]
 
+\paragraph{Q3.}
+In $\triangle ABC, \angle A = 83^{\circ}, \angle B= 50^{\circ}$ and $CB=23.8$, find $AC(b)$ and $AB(c)$
+
 \begin{tikzpicture}[scale=0.30]
   \tkzDefPoint(0,0){B}
   \tkzDefPoint(23.8,0){C}
@@ -2777,6 +2795,23 @@ Using sine rule
   \tkzLabelSegment[left,above](A,B){$c$}
   \tkzLabelSegment[below](B,C){$a=23.8$}
 \end{tikzpicture}
+
+{\scriptsize \textbf{Solution:}}
+
+\[
+  \begin{aligned}
+    \frac{23.8}{\sin 83^{\circ}} = \frac{b}{\sin 50^{\circ}} \\
+    \therefore b = 18.37 \\
+    \\
+    \\
+    \angle C = 180^{\circ}-50^{\circ}-83^{\circ}=47^{\circ} \\
+    \frac{23.8}{\sin 83^{\circ}} = \frac{c}{\sin 47^{\circ}} \\
+    \therefore c = 17.54
+  \end{aligned}
+\]
+
+\paragraph{Q4.}
+Find $BC$ and $CD$
 
 \begin{tikzpicture}[scale=0.35]
   \tkzDefPoint(0,0){A}
@@ -2797,26 +2832,6 @@ Using sine rule
   \tkzLabelAngle[pos=4](C,A,B){$15^\circ$}
   \tkzMarkRightAngle[size=1](B,D,C)
 \end{tikzpicture}
-
-\paragraph{Q3.}
-In $\triangle ABC, \angle A = 83^{\circ}, \angle B= 50^{\circ}$ and $CB=23.8$, find $AC(b)$ and $AB(c)$
-
-{\scriptsize \textbf{Solution:}}
-
-\[
-  \begin{aligned}
-    \frac{23.8}{\sin 83^{\circ}} = \frac{b}{\sin 50^{\circ}} \\
-    \therefore b = 18.37 \\
-    \\
-    \\
-    \angle C = 180^{\circ}-50^{\circ}-83^{\circ}=47^{\circ} \\
-    \frac{23.8}{\sin 83^{\circ}} = \frac{c}{\sin 47^{\circ}} \\
-    \therefore c = 17.54
-  \end{aligned}
-\]
-
-\paragraph{Q4.}
-Find $BC$ and $CD$
 
 {\scriptsize \textbf{Solution:}}
 
