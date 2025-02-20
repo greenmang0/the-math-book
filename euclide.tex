@@ -20,25 +20,52 @@
 %   \tkzLabelSegment[right](B,C){$23.8$}
 % \end{tikzpicture}
 %
-%
-% Q8.
+% Q10.
 \begin{tikzpicture}[scale=.60]
   \tkzSetUpLine[line width=1pt]
-  \tkzDefPoints{0/0/C,6/0/B,0/10.77/D,0/6.77/d,-2/0/b}
-  \tkzDrawSegments(C,B C,D)
-  \tkzInterCC(D,d)(B,b) \tkzGetPoints{A}{}
+  \tkzDefPoints{0/0/A,6/0/B,12/6/c,0/9.95/v}
+  \tkzDefParallelogram(A,B,c)
+  \tkzGetPoint{d}
+  \tkzInterLC(A,d)(A,B) \tkzGetPoints{}{D}
+  \tkzInterLC(B,c)(B,A) \tkzGetPoints{C}{}
   \tkzDrawPolygon(A,B,C,D)
-  \tkzDrawSegments(C,A)
-  \tkzMarkAngle[size=1.7](A,C,D)
-  \tkzLabelAngle[pos=2.3](A,C,D){$\theta$}
-  \tkzLabelPoints(C,B)
-  \tkzLabelPoints[left](D)
-  \tkzLabelPoints[right](A)
-  \tkzLabelSegment[above](D,A){$4$}
-  \tkzLabelSegment[right](A,B){$8$}
-  \tkzLabelSegment[below](C,B){$6$}
-  \tkzLabelSegment[left](D,C){$10.77$}
+  \tkzLabelPoints[left](A,D)
+  \tkzLabelPoints[right](B,C)
+  \tkzDefMidPoint(A,B) \tkzGetPoint{M}
+  \tkzDrawPoint(M)
+  \tkzLabelPoints[below](M)
+  \tkzDefMidPoint(A,C) \tkzGetPoint{X}
+  \tkzDrawPoint(X)
+  \tkzLabelPoints[below](X)
+  \tkzDefLine[perpendicular=through X,K=1](D,C)
+  \tkzGetPoint{n}
+  \tkzInterLC(X,n)(A,v) \tkzGetPoints{}{V}
+  \tkzLabelPoints[left](V)
+  \tkzDrawPolygon(A,V,B)
+  \tkzDrawSegments(A,C D,V C,V)
+  \tkzDrawSegments[style=dashed](X,V)
+  \tkzLabelSegment[pos=0.2, left](X,V){$9m$}
+  \tkzLabelSegment[right](B,C){$6m$}
 \end{tikzpicture}
+
+% Q8.
+% \begin{tikzpicture}[scale=.60]
+%   \tkzSetUpLine[line width=1pt]
+%   \tkzDefPoints{0/0/C,6/0/B,0/10.77/D,0/6.77/d,-2/0/b}
+%   \tkzDrawSegments(C,B C,D)
+%   \tkzInterCC(D,d)(B,b) \tkzGetPoints{A}{}
+%   \tkzDrawPolygon(A,B,C,D)
+%   \tkzDrawSegments(C,A)
+%   \tkzMarkAngle[size=1.7](A,C,D)
+%   \tkzLabelAngle[pos=2.3](A,C,D){$\theta$}
+%   \tkzLabelPoints(C,B)
+%   \tkzLabelPoints[left](D)
+%   \tkzLabelPoints[right](A)
+%   \tkzLabelSegment[above](D,A){$4$}
+%   \tkzLabelSegment[right](A,B){$8$}
+%   \tkzLabelSegment[below](C,B){$6$}
+%   \tkzLabelSegment[left](D,C){$10.77$}
+% \end{tikzpicture}
 
 % Q5.
 \begin{tikzpicture}[scale=.50]
@@ -59,29 +86,29 @@
   \tkzLabelSegment[above](B,A){$6$}
 \end{tikzpicture}
 
-% Q7
-\begin{tikzpicture}[scale=.75]
-  \tkzSetUpLine[line width=1pt]
-  \tkzDefPoints{2/4/P,4/8/Q,4/0/R}
-  \tkzDrawPolygon(P,Q,R)
-  \tkzLabelPoints[left](P,Q,R)
-  \tkzMarkAngle[size=1](P,Q,R)
-  \tkzLabelAngle[pos=1.5](P,Q,R){$\theta$}
-\end{tikzpicture}
+% % Q7
+% \begin{tikzpicture}[scale=.75]
+%   \tkzSetUpLine[line width=1pt]
+%   \tkzDefPoints{2/4/P,4/8/Q,4/0/R}
+%   \tkzDrawPolygon(P,Q,R)
+%   \tkzLabelPoints[left](P,Q,R)
+%   \tkzMarkAngle[size=1](P,Q,R)
+%   \tkzLabelAngle[pos=1.5](P,Q,R){$\theta$}
+% \end{tikzpicture}
 
-% Q9
-\begin{tikzpicture}[scale=.50]
-  \tkzSetUpLine[line width=1pt]
-  \tkzDefPoints{0/0/B,0/7.10/A,7.81/0/C}
-  \tkzDrawPolygon(B,A,C)
-  \tkzLabelPoints[left](A)
-  \tkzLabelPoints[below](B,C)
-  \tkzMarkAngle[size=1](C,B,A)
-  \tkzLabelAngle[pos=1.7](C,B,A){$95^{\circ}$}
-  \tkzMarkAngle[size=1](A,C,B)
-  \tkzLabelAngle[pos=1.7](A,C,B){$40^{\circ}$}
-  \tkzLabelSegment[right](A,C){$11$}
-\end{tikzpicture}
+% % Q9
+% \begin{tikzpicture}[scale=.50]
+%   \tkzSetUpLine[line width=1pt]
+%   \tkzDefPoints{0/0/B,0/7.10/A,7.81/0/C}
+%   \tkzDrawPolygon(B,A,C)
+%   \tkzLabelPoints[left](A)
+%   \tkzLabelPoints[below](B,C)
+%   \tkzMarkAngle[size=1](C,B,A)
+%   \tkzLabelAngle[pos=1.7](C,B,A){$95^{\circ}$}
+%   \tkzMarkAngle[size=1](A,C,B)
+%   \tkzLabelAngle[pos=1.7](A,C,B){$40^{\circ}$}
+%   \tkzLabelSegment[right](A,C){$11$}
+% \end{tikzpicture}
 
 % \begin{tikzpicture}
 %   \tkzSetUpLine[line width=1pt]
