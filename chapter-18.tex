@@ -3028,6 +3028,24 @@ In the rectangular box $ABCDPQRS$, given $AB=10, BC=5, BQ=7$, find (a) Largest D
 \paragraph{Q13.}
 The cube shown as edges of length $20cm$. The midpoint of $AP$ is $M$. Calculate the length of (a) $AC$ (b) $CM$ (c) $\angle CMR$
 
+\begin{tikzpicture}[scale=.20]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/P,20/0/S,0/20/A,20/20/D}
+  \tkzDrawPolygon(P,S,D,A)
+  \tkzInterLC(P,D)(P,S) \tkzGetPoints{}{Q}
+  \tkzDefPointsBy[translation=from P to Q](A,S,D){B,R,C}
+  \tkzDrawSegments(A,B D,C S,R C,B C,R)
+  \tkzDrawSegments[style=dashed](Q,P Q,B Q,R)
+  \tkzDefMidPoint(A,P) \tkzGetPoint{M}
+  \tkzDefMidPoint(C,R) \tkzGetPoint{N}
+  \tkzDrawSegments[color=gray, style=dashed](M,C M,R M,N)
+  \tkzLabelPoints[above](A,B,C,D)
+  \tkzLabelPoints[below](Q)
+  \tkzLabelPoints[left](P,M)
+  \tkzLabelPoints[right](S,R,N)
+  \tkzLabelSegment[below](P,S){$20cm$}
+\end{tikzpicture}
+
 {\scriptsize \textbf{Solution:}}
 
 \[
@@ -3050,6 +3068,33 @@ The cube shown as edges of length $20cm$. The midpoint of $AP$ is $M$. Calculate
 Figure shows a pyramid whose base is a rectangle with sides $10cm$ and $16cm$ with height $9cm$.
 
 Find (a) edge $EA$ (b) $\angle$ between the edge $EA$ and diagonal (c) $N$ is the midpoint of $AD$, find $\angle ENM$.
+
+\begin{tikzpicture}[scale=.36]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/A,16/0/B,10/0/a,6/0/b,25/10/c}
+  \tkzDefParallelogram(A,B,c)
+  \tkzGetPoint{d}
+  \tkzInterLC(B,c)(B,b) \tkzGetPoints{C}{}
+  \tkzInterLC(A,d)(A,a) \tkzGetPoints{}{D}
+  \tkzDrawPolygon(A,B,C,D)
+  \tkzDefMidPoint(A,C) \tkzGetPoint{M}
+  \tkzDrawPoint(M)
+  \tkzDrawSegment(A,C)
+  \tkzDefMidPoint(A,D) \tkzGetPoint{N}
+  \tkzDrawPoint(N)
+  \tkzDefLine[perpendicular=through M,K=1](D,C)
+  \tkzGetPoint{E}
+  \tkzLabelPoints[left](A,D,E)
+  \tkzLabelPoints[below](M,N)
+  \tkzLabelPoints[right](B,C)
+  \tkzDrawPolygon[style=dashed](M,N,E)
+  \tkzDrawSegments(A,E D,E C,E B,E)
+  \tkzLabelSegment[below](A,B){$16$}
+  \tkzLabelSegment[right](B,C){$10$}
+  \tkzLabelSegment[left](M,E){$9$}
+  \tkzMarkAngle[size=1.5](M,A,E)
+  \tkzMarkAngle[size=1.5](M,N,E)
+\end{tikzpicture}
 
 {\scriptsize \textbf{Solution:}}
 
