@@ -2589,6 +2589,28 @@ Find the value of a)$\tan x^{\circ}$, b) $HB$
 \paragraph{Q28.}
 A ship sails $2.8$km on a bearing of $120^{\circ}$ and then heads $4.0$km in the northerly direction. Find total distance from starting point and earing of $B$ from $O$.
 
+\begin{tikzpicture}[scale=1, rotate=-30]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/O,0/3.56/B,2.8/0/A}
+  \tkzDrawPolygon(O,B,A)
+  \tkzDefLine[parallel=through O](A,B)
+  \tkzGetPoint{N}
+  \tkzDrawLine[->](O,N)
+  \tkzDefLine[perpendicular=through A,K=1](O,N)
+  \tkzGetPoint{e}
+  \tkzInterLL(O,N)(A,e) \tkzGetPoint{N'}
+  \tkzDrawLine[->](O,N')
+  \tkzLabelPoints[left](O,N,N')
+  \tkzLabelPoints[below](A)
+  \tkzLabelPoints[above](B)
+  \tkzMarkAngle[size=0.9](N',O,A)
+  \tkzLabelAngle[pos=1.2](N',O,A){$60^{\circ}$}
+  \tkzMarkAngle[size=0.7](A,O,N)
+  \tkzLabelAngle[pos=1.3](A,O,N){$120^{\circ}$}
+  \tkzLabelSegment[pos=0.6, above](O,A){$2.8$}
+  \tkzLabelSegment[right](B,A){$4$}
+\end{tikzpicture}
+
 {\scriptsize \textbf{Hint:}}
 $\angle N^{'}OA = 60^{\circ} \therefore \angle OAB = 60^{\circ}$ (alternate $\angle$)
 
