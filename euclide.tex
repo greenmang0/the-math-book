@@ -20,6 +20,32 @@
 %   \tkzLabelSegment[right](B,C){$23.8$}
 % \end{tikzpicture}
 %
+% Q11.
+\begin{tikzpicture}[scale=.75]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/A,5/0/B,12/5/c,0/7/v}
+  \tkzDefParallelogram(A,B,c)
+  \tkzGetPoint{d}
+  \tkzInterLC(A,d)(A,B) \tkzGetPoints{}{D}
+  \tkzInterLC(B,c)(B,A)  \tkzGetPoints{C}{}
+  \tkzDrawPolygon(A,B,C,D)
+  \tkzLabelPoints[left](A,D)
+  \tkzLabelPoints[right](B,C)
+  \tkzDefMidPoint(A,C) \tkzGetPoint{X}
+  \tkzDrawPoint(X)
+  \tkzLabelPoints[below](X)
+  \tkzDefLine[perpendicular=through X,K=1](D,C)
+  \tkzGetPoint{n}
+  \tkzInterLC(X,n)(A,v) \tkzGetPoints{}{V}
+  \tkzLabelPoints[left](V)
+  \tkzDrawPolygon(A,V,B)
+  \tkzDrawSegments(A,C D,V C,V)
+  \tkzDrawSegments[style=dashed](X,V)
+  \tkzLabelSegment[pos=0.2, left](X,V){$7m$}
+  \tkzLabelSegment[below](A,B){$50m$}
+  \tkzLabelSegment[pos=0.75, left](A,D){$50m$}
+\end{tikzpicture}
+
 % Q10.
 \begin{tikzpicture}[scale=.60]
   \tkzSetUpLine[line width=1pt]
@@ -70,12 +96,12 @@
 % Q5.
 \begin{tikzpicture}[scale=.50]
   \tkzSetUpLine[line width=1pt]
-  \tkzDefPoints{0/0/X,8/0/Y,0/5/B,8/5/C,4/0/x,2/0/y}
+  \tkzDefPoints{0/0/X,8/0/Y,0/5/B,8/5/C,6/0/x,2/0/y}
   \tkzDrawPolygon(X,Y,C,B)
   \tkzInterCC(X,x)(Y,y) \tkzGetPoints{W}{}
   \tkzDefPointsBy[translation=from X to W](Y,B,C){Z,A,D}
   \tkzDrawPolygon(A,D,Z,W)
-  \tkzDrawPolygon(W,D,Y)
+  \tkzDrawPolygon[style=dashed](W,D,Y)
   \tkzDrawSegments(B,A C,D Y,Z X,W)
   \tkzLabelPoints[above](A,B,C,D)
   \tkzLabelPoints[left](W,X)
