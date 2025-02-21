@@ -2886,6 +2886,16 @@ Applying cosine rule
 
 \paragraph{Q7.}
 In figure, $P(2, 4), Q(4, 8)$ and $R(4, 0)$ are three vertices of a $\triangle PQR$. Find
+
+\begin{tikzpicture}[scale=.75]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{2/4/P,4/8/Q,4/0/R}
+  \tkzDrawPolygon(P,Q,R)
+  \tkzLabelPoints[left](P,Q,R)
+  \tkzMarkAngle[size=1](P,Q,R)
+  \tkzLabelAngle[pos=1.5](P,Q,R){$\theta$}
+\end{tikzpicture}
+
 \begin{enumerate*}[label=\roman*)]
   \item $PQ$
   \item $PR$
@@ -2924,6 +2934,24 @@ In figure, $P(2, 4), Q(4, 8)$ and $R(4, 0)$ are three vertices of a $\triangle P
 \paragraph{Q8.}
 Find $\theta$ in the adjoining figure, given $AB=8, BC=6, AD=4$.
 
+\begin{tikzpicture}[scale=.60]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/C,6/0/B,0/10.77/D,0/6.77/d,-2/0/b}
+  \tkzDrawSegments(C,B C,D)
+  \tkzInterCC(D,d)(B,b) \tkzGetPoints{A}{}
+  \tkzDrawPolygon(A,B,C,D)
+  \tkzDrawSegments(C,A)
+  \tkzMarkAngle[size=1.7](A,C,D)
+  \tkzLabelAngle[pos=2.3](A,C,D){$\theta$}
+  \tkzLabelPoints(C,B)
+  \tkzLabelPoints[left](D)
+  \tkzLabelPoints[right](A)
+  \tkzLabelSegment[above](D,A){$4$}
+  \tkzLabelSegment[right](A,B){$8$}
+  \tkzLabelSegment[below](C,B){$6$}
+  \tkzLabelSegment[left](D,C){$10.77$}
+\end{tikzpicture}
+
 {\scriptsize \textbf{Solution:}}
 Applying Pythagoras theorem
 
@@ -2939,6 +2967,19 @@ Applying Pythagoras theorem
 
 \paragraph{Q9.}
 In the adjoining figure, $A=11, \angle C = 40^{\circ}, \angle B=95^{\circ}$.
+
+\begin{tikzpicture}[scale=.50]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/B,0/7.10/A,7.81/0/C}
+  \tkzDrawPolygon(B,A,C)
+  \tkzLabelPoints[left](A)
+  \tkzLabelPoints[below](B,C)
+  \tkzMarkAngle[size=1](C,B,A)
+  \tkzLabelAngle[pos=1.7](C,B,A){$95^{\circ}$}
+  \tkzMarkAngle[size=1](A,C,B)
+  \tkzLabelAngle[pos=1.7](A,C,B){$40^{\circ}$}
+  \tkzLabelSegment[right](A,C){$11$}
+\end{tikzpicture}
 
 {\scriptsize \textbf{Solution:}}
 
@@ -2964,6 +3005,33 @@ A pyramid of square base of $6m$ side has vertical height $9m$. $M$ is the midpo
   \item Volume of pyramid
   \item Surface area of pyramid
 \end{enumerate*}
+
+\begin{tikzpicture}[scale=.60]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/A,6/0/B,12/6/c,0/9.95/v}
+  \tkzDefParallelogram(A,B,c)
+  \tkzGetPoint{d}
+  \tkzInterLC(A,d)(A,B) \tkzGetPoints{}{D}
+  \tkzInterLC(B,c)(B,A) \tkzGetPoints{C}{}
+  \tkzDrawPolygon(A,B,C,D)
+  \tkzLabelPoints[left](A,D)
+  \tkzLabelPoints[right](B,C)
+  \tkzDefMidPoint(A,B) \tkzGetPoint{M}
+  \tkzDrawPoint(M)
+  \tkzLabelPoints[below](M)
+  \tkzDefMidPoint(A,C) \tkzGetPoint{X}
+  \tkzDrawPoint(X)
+  \tkzLabelPoints[below](X)
+  \tkzDefLine[perpendicular=through X,K=1](D,C)
+  \tkzGetPoint{n}
+  \tkzInterLC(X,n)(A,v) \tkzGetPoints{}{V}
+  \tkzLabelPoints[left](V)
+  \tkzDrawPolygon(A,V,B)
+  \tkzDrawSegments(A,C D,V C,V)
+  \tkzDrawSegments[style=dashed](X,V)
+  \tkzLabelSegment[pos=0.2, left](X,V){$9m$}
+  \tkzLabelSegment[right](B,C){$6m$}
+\end{tikzpicture}
 
 {\scriptsize \textbf{Solution:}}
 
@@ -2994,6 +3062,31 @@ A pyramid of square base of $6m$ side has vertical height $9m$. $M$ is the midpo
 \paragraph{Q11.}
 In a square based pyramid, a) calculate $VC$ (slant edge). b) Calculate the angle $VC$ makes with $AC$.
 
+\begin{tikzpicture}[scale=.75]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/A,5/0/B,12/5/c,0/7/v}
+  \tkzDefParallelogram(A,B,c)
+  \tkzGetPoint{d}
+  \tkzInterLC(A,d)(A,B) \tkzGetPoints{}{D}
+  \tkzInterLC(B,c)(B,A)  \tkzGetPoints{C}{}
+  \tkzDrawPolygon(A,B,C,D)
+  \tkzLabelPoints[left](A,D)
+  \tkzLabelPoints[right](B,C)
+  \tkzDefMidPoint(A,C) \tkzGetPoint{X}
+  \tkzDrawPoint(X)
+  \tkzLabelPoints[below](X)
+  \tkzDefLine[perpendicular=through X,K=1](D,C)
+  \tkzGetPoint{n}
+  \tkzInterLC(X,n)(A,v) \tkzGetPoints{}{V}
+  \tkzLabelPoints[left](V)
+  \tkzDrawPolygon(A,V,B)
+  \tkzDrawSegments(A,C D,V C,V)
+  \tkzDrawSegments[style=dashed](X,V)
+  \tkzLabelSegment[pos=0.2, left](X,V){$7m$}
+  \tkzLabelSegment[below](A,B){$50m$}
+  \tkzLabelSegment[pos=0.75, left](A,D){$50m$}
+\end{tikzpicture}
+
 {\scriptsize \textbf{Solution:}}
 
 \[
@@ -3010,6 +3103,25 @@ In a square based pyramid, a) calculate $VC$ (slant edge). b) Calculate the angl
 
 \paragraph{Q12.}
 In the rectangular box $ABCDPQRS$, given $AB=10, BC=5, BQ=7$, find (a) Largest Diagonal (b) $\angle QBD$
+
+\begin{tikzpicture}[scale=.50]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/A,10/0/B,0/7/P,10/7/Q,6/0/a,2/0/b}
+  \tkzDrawPolygon(A,B,Q,P)
+  \tkzInterCC(A,a)(B,b) \tkzGetPoints{D}{}
+  \tkzDefPointsBy[translation=from A to D](B,P,Q){C,S,R}
+  \tkzDrawPolygon(D,S,R,C)
+  \tkzDrawSegments[style=dashed](B,D Q,D)
+  \tkzDrawSegments(A,D P,S Q,R B,C)
+  \tkzLabelPoints[above](P,S,Q,R)
+  \tkzLabelPoints[right](B,C)
+  \tkzLabelPoints[left](A,D)
+  \tkzMarkAngle[size=1.5](B,D,Q)
+  \tkzMarkRightAngle[size=1](Q,B,D)
+  \tkzLabelSegment[left](A,P){$7$}
+  \tkzLabelSegment[below](A,B){$10$}
+  \tkzLabelSegment[right](B,C){$5$}
+\end{tikzpicture}
 
 {\scriptsize \textbf{Solution:}}
 
