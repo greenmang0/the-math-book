@@ -3083,6 +3083,22 @@ Find (a) edge $EA$ (b) $\angle$ between the edge $EA$ and diagonal (c) $N$ is th
 \paragraph{Q15.}
 Find $\angle CAF$ if $AC = \sqrt{5^{2}+4^{2}} = \sqrt{41}, CF = \sqrt{3^{2}+4^{2}} = 5, AF = \sqrt{3^{2}+5^{2}} = \sqrt{34}$
 
+\begin{tikzpicture}[scale=0.75]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/E,5/0/F,0/3/A,5/3/B,1/0/f}
+  \tkzDrawPolygon(E,F,B,A)
+  \tkzInterCC(F,f)(E,F) \tkzGetPoints{}{H}
+  \tkzDefPointsBy[translation=from E to H](F,A,B){G,D,C}
+  \tkzDrawSegments(A,D B,C F,G D,C G,C)
+  \tkzDrawSegments[style=dashed](E,H D,H G,H)
+  \tkzDrawPolygon[style=dashed](C,A,F)
+  \tkzLabelPoints(E,F,G,H)
+  \tkzLabelPoints[above](A,B,C,D)
+  \tkzLabelSegment[below](E,F){$5$}
+  \tkzLabelSegment[right](F,G){$4$}
+  \tkzLabelSegment[right](C,G){$3$}
+\end{tikzpicture}
+
 {\scriptsize \textbf{Solution:}}
 
 \[
