@@ -20,59 +20,79 @@
 %   \tkzLabelSegment[right](B,C){$23.8$}
 % \end{tikzpicture}
 %
-% Q11.
-\begin{tikzpicture}[scale=.75]
+% Q12.
+\begin{tikzpicture}[scale=.50]
   \tkzSetUpLine[line width=1pt]
-  \tkzDefPoints{0/0/A,5/0/B,12/5/c,0/7/v}
-  \tkzDefParallelogram(A,B,c)
-  \tkzGetPoint{d}
-  \tkzInterLC(A,d)(A,B) \tkzGetPoints{}{D}
-  \tkzInterLC(B,c)(B,A)  \tkzGetPoints{C}{}
-  \tkzDrawPolygon(A,B,C,D)
-  \tkzLabelPoints[left](A,D)
+  \tkzDefPoints{0/0/A,10/0/B,0/7/P,10/7/Q,6/0/a,2/0/b}
+  \tkzDrawPolygon(A,B,Q,P)
+  \tkzInterCC(A,a)(B,b) \tkzGetPoints{D}{}
+  \tkzDefPointsBy[translation=from A to D](B,P,Q){C,S,R}
+  \tkzDrawPolygon(D,S,R,C)
+  \tkzDrawSegments[style=dashed](B,D Q,D)
+  \tkzDrawSegments(A,D P,S Q,R B,C)
+  \tkzLabelPoints[above](P,S,Q,R)
   \tkzLabelPoints[right](B,C)
-  \tkzDefMidPoint(A,C) \tkzGetPoint{X}
-  \tkzDrawPoint(X)
-  \tkzLabelPoints[below](X)
-  \tkzDefLine[perpendicular=through X,K=1](D,C)
-  \tkzGetPoint{n}
-  \tkzInterLC(X,n)(A,v) \tkzGetPoints{}{V}
-  \tkzLabelPoints[left](V)
-  \tkzDrawPolygon(A,V,B)
-  \tkzDrawSegments(A,C D,V C,V)
-  \tkzDrawSegments[style=dashed](X,V)
-  \tkzLabelSegment[pos=0.2, left](X,V){$7m$}
-  \tkzLabelSegment[below](A,B){$50m$}
-  \tkzLabelSegment[pos=0.75, left](A,D){$50m$}
+  \tkzLabelPoints[left](A,D)
+  \tkzMarkAngle[size=1.5](B,D,Q)
+  \tkzMarkRightAngle[size=1](Q,B,D)
+  \tkzLabelSegment[left](A,P){$7$}
+  \tkzLabelSegment[below](A,B){$10$}
+  \tkzLabelSegment[right](B,C){$5$}
 \end{tikzpicture}
 
-% Q10.
-\begin{tikzpicture}[scale=.60]
-  \tkzSetUpLine[line width=1pt]
-  \tkzDefPoints{0/0/A,6/0/B,12/6/c,0/9.95/v}
-  \tkzDefParallelogram(A,B,c)
-  \tkzGetPoint{d}
-  \tkzInterLC(A,d)(A,B) \tkzGetPoints{}{D}
-  \tkzInterLC(B,c)(B,A) \tkzGetPoints{C}{}
-  \tkzDrawPolygon(A,B,C,D)
-  \tkzLabelPoints[left](A,D)
-  \tkzLabelPoints[right](B,C)
-  \tkzDefMidPoint(A,B) \tkzGetPoint{M}
-  \tkzDrawPoint(M)
-  \tkzLabelPoints[below](M)
-  \tkzDefMidPoint(A,C) \tkzGetPoint{X}
-  \tkzDrawPoint(X)
-  \tkzLabelPoints[below](X)
-  \tkzDefLine[perpendicular=through X,K=1](D,C)
-  \tkzGetPoint{n}
-  \tkzInterLC(X,n)(A,v) \tkzGetPoints{}{V}
-  \tkzLabelPoints[left](V)
-  \tkzDrawPolygon(A,V,B)
-  \tkzDrawSegments(A,C D,V C,V)
-  \tkzDrawSegments[style=dashed](X,V)
-  \tkzLabelSegment[pos=0.2, left](X,V){$9m$}
-  \tkzLabelSegment[right](B,C){$6m$}
-\end{tikzpicture}
+% % Q11.
+% \begin{tikzpicture}[scale=.75]
+%   \tkzSetUpLine[line width=1pt]
+%   \tkzDefPoints{0/0/A,5/0/B,12/5/c,0/7/v}
+%   \tkzDefParallelogram(A,B,c)
+%   \tkzGetPoint{d}
+%   \tkzInterLC(A,d)(A,B) \tkzGetPoints{}{D}
+%   \tkzInterLC(B,c)(B,A)  \tkzGetPoints{C}{}
+%   \tkzDrawPolygon(A,B,C,D)
+%   \tkzLabelPoints[left](A,D)
+%   \tkzLabelPoints[right](B,C)
+%   \tkzDefMidPoint(A,C) \tkzGetPoint{X}
+%   \tkzDrawPoint(X)
+%   \tkzLabelPoints[below](X)
+%   \tkzDefLine[perpendicular=through X,K=1](D,C)
+%   \tkzGetPoint{n}
+%   \tkzInterLC(X,n)(A,v) \tkzGetPoints{}{V}
+%   \tkzLabelPoints[left](V)
+%   \tkzDrawPolygon(A,V,B)
+%   \tkzDrawSegments(A,C D,V C,V)
+%   \tkzDrawSegments[style=dashed](X,V)
+%   \tkzLabelSegment[pos=0.2, left](X,V){$7m$}
+%   \tkzLabelSegment[below](A,B){$50m$}
+%   \tkzLabelSegment[pos=0.75, left](A,D){$50m$}
+% \end{tikzpicture}
+
+% % Q10.
+% \begin{tikzpicture}[scale=.60]
+%   \tkzSetUpLine[line width=1pt]
+%   \tkzDefPoints{0/0/A,6/0/B,12/6/c,0/9.95/v}
+%   \tkzDefParallelogram(A,B,c)
+%   \tkzGetPoint{d}
+%   \tkzInterLC(A,d)(A,B) \tkzGetPoints{}{D}
+%   \tkzInterLC(B,c)(B,A) \tkzGetPoints{C}{}
+%   \tkzDrawPolygon(A,B,C,D)
+%   \tkzLabelPoints[left](A,D)
+%   \tkzLabelPoints[right](B,C)
+%   \tkzDefMidPoint(A,B) \tkzGetPoint{M}
+%   \tkzDrawPoint(M)
+%   \tkzLabelPoints[below](M)
+%   \tkzDefMidPoint(A,C) \tkzGetPoint{X}
+%   \tkzDrawPoint(X)
+%   \tkzLabelPoints[below](X)
+%   \tkzDefLine[perpendicular=through X,K=1](D,C)
+%   \tkzGetPoint{n}
+%   \tkzInterLC(X,n)(A,v) \tkzGetPoints{}{V}
+%   \tkzLabelPoints[left](V)
+%   \tkzDrawPolygon(A,V,B)
+%   \tkzDrawSegments(A,C D,V C,V)
+%   \tkzDrawSegments[style=dashed](X,V)
+%   \tkzLabelSegment[pos=0.2, left](X,V){$9m$}
+%   \tkzLabelSegment[right](B,C){$6m$}
+% \end{tikzpicture}
 
 % Q8.
 % \begin{tikzpicture}[scale=.60]
@@ -106,7 +126,7 @@
   \tkzLabelPoints[above](A,B,C,D)
   \tkzLabelPoints[left](W,X)
   \tkzLabelPoints[right](Y,Z)
-  \tkzMarkAngle[size=1](W,D,Y)
+  \tkzMarkAngle[size=1.5](W,D,Y)
   \tkzLabelSegment[left](B,X){$5$}
   \tkzLabelSegment(X,Y){$8$}
   \tkzLabelSegment[above](B,A){$6$}
