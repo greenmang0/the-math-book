@@ -2413,6 +2413,7 @@ In Fig(2), find $x^{\circ},y^{\circ}(\angle BDA)$ and $DB$
 
 \begin{center}
   \begin{tikzpicture}[scale=0.07]
+    \tkzSetUpLine[line width=1pt]
     \tkzDefPoint(0,0){C}
     \tkzDefPoint(113.45906750894791,0){A}
     \tkzDefPoint(0,53.6){D}
@@ -2442,6 +2443,7 @@ In Fig(3), find $x$ and $y$ sides
 
 \begin{center}
   \begin{tikzpicture}[scale=0.75]
+    \tkzSetUpLine[line width=1pt]
     \tkzDefPoint(0,0){A}
     \tkzDefPoint(8,0){B}
     \tkzDefTriangle[two angles = 90 and 32](A,B)
@@ -2478,6 +2480,7 @@ In Fig(3), find $x$ and $y$ sides
 
 \begin{center}
   \begin{tikzpicture}[scale=0.25]
+    \tkzSetUpLine[line width=1pt]
     \tkzDefPoint(0,0){A}
     \tkzDefPoint(17.54,0){B}
     \tkzDefTriangle[two angles = 84 and 49](A,B)
@@ -2497,6 +2500,7 @@ In Fig(3), find $x$ and $y$ sides
   \end{center}
 
   \begin{tikzpicture}[scale=0.30]
+    \tkzSetUpLine[line width=1pt]
     \tkzDefPoint(0,0){A}
     \tkzDefPoint(9,0){C}
     \tkzDefTriangle[two angles = 66 and 85](A,C)
@@ -2698,7 +2702,8 @@ $\angle N^{'}OA = 60^{\circ} \therefore \angle OAB = 60^{\circ}$ (alternate $\an
 
 In the figure, it is given that $AB=8, BC=5=BD$ and $\angle C=53.1^{\circ}$. Find $\angle ADB, AD$
 
-\begin{tikzpicture}[scale=0.75, thick]
+\begin{tikzpicture}[scale=0.50]
+  \tkzSetUpLine[line width=1pt]
   \tkzDefPoints{0/0/C,5/0/X,16.505048943922077/0/A,6/0/D}
   \tkzDrawSegment(C,D)
   \tkzDrawSegment(D,A)
@@ -2739,7 +2744,8 @@ Using sine rule
 
 In $\triangle ABC$ sides are given as $10cm$ and $12cm$ and included $\angle ACB=48^{\circ}$. Find a) $AB$ b) $\angle BAC$
 
-\begin{tikzpicture}[scale=0.50]
+\begin{tikzpicture}[scale=0.40]
+  \tkzSetUpLine[line width=1pt]
   \tkzDefPoints{0/0/C,12/0/B,10/0/X}
   \tkzDrawSegment(C,B)
   \tkzLabelSegment[below](C,B){$12cm$}
@@ -2780,6 +2786,7 @@ Using sine rule
 In $\triangle ABC, \angle A = 83^{\circ}, \angle B= 50^{\circ}$ and $CB=23.8$, find $AC(b)$ and $AB(c)$
 
 \begin{tikzpicture}[scale=0.30]
+  \tkzSetUpLine[line width=1pt]
   \tkzDefPoint(0,0){B}
   \tkzDefPoint(23.8,0){C}
   \tkzDefTriangle[two angles = 50 and 47](B,C)
@@ -2814,6 +2821,7 @@ In $\triangle ABC, \angle A = 83^{\circ}, \angle B= 50^{\circ}$ and $CB=23.8$, f
 Find $BC$ and $CD$
 
 \begin{tikzpicture}[scale=0.35]
+  \tkzSetUpLine[line width=1pt]
   \tkzDefPoint(0,0){A}
   \tkzDefPoint(10,0){C}
   \tkzDefPoint(21.09,0){D}
@@ -2850,6 +2858,24 @@ Find $BC$ and $CD$
 
 \paragraph{Q5.}
 Find $\cos \angle WDY$
+
+\begin{tikzpicture}[scale=.50]
+  \tkzSetUpLine[line width=1pt]
+  \tkzDefPoints{0/0/X,8/0/Y,0/5/B,8/5/C,6/0/x,2/0/y}
+  \tkzDrawPolygon(X,Y,C,B)
+  \tkzInterCC(X,x)(Y,y) \tkzGetPoints{W}{}
+  \tkzDefPointsBy[translation=from X to W](Y,B,C){Z,A,D}
+  \tkzDrawPolygon(A,D,Z,W)
+  \tkzDrawPolygon[style=dashed](W,D,Y)
+  \tkzDrawSegments(B,A C,D Y,Z X,W)
+  \tkzLabelPoints[above](A,B,C,D)
+  \tkzLabelPoints[left](W,X)
+  \tkzLabelPoints[right](Y,Z)
+  \tkzMarkAngle[size=1.5](W,D,Y)
+  \tkzLabelSegment[left](B,X){$5$}
+  \tkzLabelSegment(X,Y){$8$}
+  \tkzLabelSegment[above](B,A){$6$}
+\end{tikzpicture}
 
 {\scriptsize \textbf{Solution:}}
 
